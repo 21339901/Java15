@@ -1,10 +1,8 @@
 package Java15;
 
-import java.io.*;
-
 public class Class03 {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args)   {
 		CTest hi = new CTest("Hello");
 		CTest bye = new CTest("Good bye");
 		
