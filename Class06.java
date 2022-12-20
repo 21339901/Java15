@@ -1,10 +1,9 @@
 package Java15;
 
-import java.io.*;
 
 public class Class06 {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args)   {
 		Add ad1 = new Add(5);
 		Add ad2 = new Add(10);
 		Thread t1 = new Thread(ad1);
