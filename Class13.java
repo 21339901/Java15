@@ -3,10 +3,12 @@ package Java15;
 public class Class13 {
 
 	public static void main(String[] args) {
-		 CCustomer c1=new CCustomer();
-	      CCustomer c2=new CCustomer();
-	      c1.start();
-	      c2.start();
+		CCustomer c1=new CCustomer();
+	        CCustomer c2=new CCustomer();
+	        Thread t1=new Thread(c1);
+ 		Thread t2=new Thread(c2);
+		t1.start();
+		t2.start();
 	}
 }
 
@@ -24,7 +26,7 @@ class CBank {
       System.out.println("sum= "+sum);
   }
 }
-class  CCustomer extends Thread {
+class  CCustomer implements Runnable {
    public void run() {
       for(int i=1;i<=3;i++)
          CBank.add(100);      
